@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Stellar by HTML5 UP</title>
+		<title>FewNLU</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,18 +20,18 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Stellar</h1>
-						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<h1>FewNLU</h1>
+						<p>A new NLP model<br />
+						built by <a href="https://twitter.com/ajlkn">@xxx</a>.</p>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">First Section</a></li>
-							<li><a href="#second">Second Section</a></li>
-							<li><a href="#cta">Get Started</a></li>
+							<li><a href="#intro" class="active">Introduction to FewNLU</a></li>
+							<li><a href="#first">Data Download</a></li>
+							<li><a href="#second">Package Download</a></li>
+							<li><a href="#cta">Leaderboard</a></li>
 						</ul>
 					</nav>
 
@@ -43,13 +43,15 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
+											<h2>Introduction to FewNLU</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<p>Recent empirical improvements due to transfer learning with language models have demonstrated that rich, 
+											unsupervised pre-training is an integral part of many language understanding systems. 
+											In particular, these results enable even low-resource tasks to benefit from very deep unidirectional ar- chitectures. 
+											Our major contribution is further gen- eralizing these findings to deep bidirectional ar- chitectures, 
+											allowing the same pre-trained model to successfully tackle a broad set of NLP tasks.</p>
 										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
+											<li><a class="button">Learn More</a></li>
 										</ul>
 									</div>
 									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
@@ -59,28 +61,31 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Magna veroeros</h2>
+									<h2>Data Download</h2>
 								</header>
 								<ul class="features">
 									<li>
 										<span class="icon solid major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<h3>Original Sources</h3>
+										<p>We use WordPiece embeddings (Wu et al., 2016) with a 30,000 token vocabulary. We denote split word pieces with ##.</p>
 									</li>
 									<li>
 										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<h3>How to use</h3>
+										<p>The first token of every sequence is al- ways the special classification embedding ([CLS]). 
+											The final hidden state (i.e., out- put of Transformer) corresponding to this to- ken is used as the aggregate sequence rep- resentation for classification tasks.</p>
 									</li>
 									<li>
 										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<h3>Data Augmentation</h3>
+										<p>Sentence pairs are packed together into a sin- gle sequence. We differentiate the sentences in two ways. 
+											First, we separate them with a special token ([SEP]). 
+											Second, we add a learned sentence A embedding to every token of the first sentence and a sentence B embed- ding to every token of the second sentence.</p>
 									</li>
 								</ul>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a class="button">Download Data</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -88,36 +93,50 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<h2>Package Download</h2>
+									<p>Quick facts about our model:</p>
 								</header>
 								<ul class="statistics">
 									<li class="style1">
 										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
+										<strong>5,120</strong> Layers
 									</li>
 									<li class="style2">
 										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
+										<strong>8,192</strong> Attention Heads
 									</li>
 									<li class="style3">
 										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
+										<strong>4</strong> Pretraining Takss
 									</li>
 									<li class="style4">
 										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
+										<strong>4,09</strong> Hyperparameters
 									</li>
 									<li class="style5">
 										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
+										<strong>1,02400</strong> Parameters
 									</li>
 								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								<h3>Why RACE is more challenging and interesting?</h3>
+								<p class="content">
+									<ul>
+										<li> RACE is created by domain experts to test students' reading comprehension skills, consequently requiring non-trivial reasoning techniques </li>
+										<li> A significant gap between the state-of-the-art model's performance and the human performance </li>
+										<li> RACE has a wide variety of question types. Here are some samples: </li>
+									  <ul>
+										<li> What is the best title of the passage? (Summarization) </li>
+										<li> What was the author’s attitude towards the industry awards? (Inference) </li>
+										<li> Which of the following statements is WRONG according to the passage? (Deduction) </li>
+										<li> If the passage appeared in a newspaper, which section is the most suitable one? (Inference) </li>
+										<li> The first postage stamp was made _ . (Context matching) </li>
+									  </ul>
+										<li>  On a personal note: please think about college and high school entrance tests you or your children have experienced, e.g., SAT or college entrance exams (高考), which are purposely designed to differentiate smart and hard-working students from others. Questions in RACE were created to prepare Chinese students for the college entrance test and high school entrance tests :) </li>
+									  </ul>
+									</p>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a class="button">Download Package</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -125,14 +144,371 @@
 						<!-- Get Started -->
 							<section id="cta" class="main special">
 								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<h2>Leaderboard</h2>
+									<p>Download the package, do experiments on your own device, and send us your results.<br />
+										Our email: xxxxxx<br/>
+										The email should contain these information: xxx, xxx, xxx</p>
+										<table>
+											<tbody>
+											  <tr>
+												<th> <strong> Model </strong> </th>
+												<th> <strong> Report Time </strong> </th>
+												<th> <strong> Institute </strong> </th>
+												<th> <strong> RACE </strong> </th>
+												<th> <strong> RACE-M </strong> </th>
+												<th> <strong> RACE-H </strong> </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Human Ceiling Performance</a> </th>
+												<th> Apr 15, 2017 </th>
+												<th> CMU </th>
+												<th> <em>94.5</em>  </th>
+												<th> <em>95.4</em> </th>
+												<th> <em>94.2</em> </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Amazon Mechanical Turker</a> </th>
+												<th> Apr 15, 2017 </th>
+												<th> CMU </th>
+												<th> 73.3 </th>
+												<th> 85.1 </th>
+												<th> 69.4 </th>
+											  </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/2011.03292.pdf"> ALBERT-SingleChoice + transfer learning </a> (ensemble) </th>
+												<th> Nov 06, 2020 </th>
+												<th> Tencent Cloud Xiaowei & Tencent Cloud TI-ONE </th>
+												<th> <strong> 91.4 </strong> </th>
+												<th> <strong> 93.6 </strong> </th>
+												<th> <strong> 90.5 </strong> </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/1909.08053.pdf"> Megatron-BERT </a> (ensemble) </th>
+												<th> Mar 13, 2020 </th>
+												<th> NVIDIA Research </th>
+												<th> 90.9 </th>
+												<th> 93.1 </th>
+												<th> 90.0 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/2011.03292.pdf"> ALBERT-SingleChoice + transfer learning </a> </th>
+												<th> Nov 06, 2020 </th>
+												<th> Tencent Cloud Xiaowei & Tencent Cloud TI-ONE </th>
+												<th> 90.7 </th>
+												<th> 92.8 </th>
+												<th> 89.8 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/abs/2001.09415"> ALBERT + DUMA </a> (ensemble) </th>
+												<th> Mar 18, 2020 </th>
+												<th> SJTU & Huawei Noah’s Ark Lab </th>
+												<th> 89.8 </th>
+												<th> 92.6 </th>
+												<th> 88.7 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/1909.08053.pdf"> Megatron-BERT </a> </th>
+												<th> Mar 13, 2020 </th>
+												<th> NVIDIA Research </th>
+												<th> 89.5 </th>
+												<th> 91.8 </th>
+												<th> 88.6 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/abs/1909.11942"> ALBERT </a> (ensemble) </th>
+												<th> Sep 26, 2019 </th>
+												<th> Google Research & TTIC </th>
+												<th> 89.4 </th>
+												<th> 91.2 </th>
+												<th> 88.6 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/2005.00700.pdf"> UnifiedQA </a> </th>
+												<th> May 02, 2020 </th>
+												<th> AI2 & UW </th>
+												<th> 89.4  </th>
+												<th> - </th>
+												<th> - </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/abs/2001.09415"> ALBERT + DUMA </a> </th>
+												<th> Feb 08, 2020 </th>
+												<th> SJTU & Huawei Noah’s Ark Lab </th>
+												<th> 88.0 </th>
+												<th> 90.9 </th>
+												<th> 86.7 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/2005.00700.pdf"> T5</a><sup>*</sup> </th>
+												<th> May 02, 2020 </th>
+												<th> Google </th>
+												<th> 87.1  </th>
+												<th> - </th>
+												<th> - </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/abs/1909.11942"> ALBERT </a> </th>
+												<th> Sep 26, 2019 </th>
+												<th> Google Research & TTIC </th>
+												<th> 86.5 </th>
+												<th> 89.0 </th>
+												<th> 85.5 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="http://arxiv.org/abs/1910.00458"> RoBERTa + MMM </a> </th>
+												<th> Oct 01, 2019 </th>
+												<th> MIT & Amazon Alexa AI </th>
+												<th> 85.0 </th>
+												<th> 89.1 </th>
+												<th>  83.3 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/abs/1908.11511"> DCMN+ </a> (ensemble) </th>
+												<th> Aug 30, 2019 </th>
+												<th> SJTU & CloudWalk </th>
+												<th> 84.1 </th>
+												<th> 88.5 </th>
+												<th> 82.3 </th>
+											   </tr>
+											   <tr>
+												<th> <a href="https://arxiv.org/abs/1907.11692"> RoBERTa </a> </th>
+												<th> Jul 26, 2019 </th>
+												<th> Facebook AI </th>
+												<th> 83.2 </th>
+												<th> 86.5 </th>
+												<th> 81.8 </th>
+											  </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/abs/1908.11511"> XLNet + DCMN+ </a> </th>
+												<th> Aug 30, 2019 </th>
+												<th> SJTU & CloudWalk </th>
+												<th> 82.8 </th>
+												<th> 86.5 </th>
+												<th> 81.3 </th>
+											   </tr>
+											   <tr>
+												 <th> <a href="https://arxiv.org/pdf/2010.10499.pdf"> BORT </a> </th>
+												<th> Oct 20, 2020 </th>
+												<th> Amazon Alexa </th>
+												<th> 82.2 </th>
+												<th> 85.9 </th>
+												<th> 80.7 </th>
+											   </tr>
+											   <tr>
+												<th> <a href="https://arxiv.org/abs/1906.08237"> XLNet </a> </th>
+												<th> Jun 19, 2019 </th>
+												<th> Google Brain & CMU </th>
+												<th> 81.75 </th>
+												<th> 85.45 </th>
+												<th> 80.21 </th>
+											  </tr>
+											   <tr>
+												<th> <a href="https://arxiv.org/abs/1908.11511"> BERT + DCMN+ </a> </th>
+												<th> Aug 30, 2019 </th>
+												<th> SJTU & CloudWalk </th>
+												<th> 75.8 </th>
+												<th> 79.3 </th>
+												<th> 74.4 </th>
+											  </tr>
+											   <tr>
+												<th> <a href="https://arxiv.org/abs/2003.04360"> GenNet </a> </th>
+												<th> Mar 03, 2020 </th>
+												<th> AIT, Pune </th>
+												<th> 75.4 </th>
+												<th> 77.3 </th>
+												<th> 79.6 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1901.09381.pdf"> Dual Co-Matching Network (DCMN) </a> (ensemble) </th>
+												<th> Mar 16, 2019 </th>
+												<th> SJTU & CloudWalk </th>
+												<th> 74.1 </th>
+												<th> 79.5 </th>
+												<th> 71.8 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1903.03033.pdf"> Option Comparison Network (OCN) </a> (ensemble) </th>
+												<th> Mar 07, 2019 </th>
+												<th> Pattern Recognition Center, WeChat AI, Tencent Inc </th>
+												<th> 73.5 </th>
+												<th> 78.4 </th>
+												<th> 71.5 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1901.09381.pdf"> Dual Co-Matching Network (DCMN) </a> </th>
+												<th> Mar 16, 2019 </th>
+												<th> SJTU & CloudWalk </th>
+												<th> 72.3 </th>
+												<th> 77.6 </th>
+												<th> 70.1 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1902.00993.pdf"> BERT_LARGE </a> </th>
+												<th> Feb 03, 2019 </th>
+												<th> Tencent AI Lab </th>
+												<th> 72.0 </th>
+												<th> 76.6 </th>
+												<th> 70.1 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1903.03033.pdf"> Option Comparison Network (OCN) </a> </th>
+												<th> Mar 07, 2019 </th>
+												<th> Pattern Recognition Center, WeChat AI, Tencent Inc </th>
+												<th> 71.7 </th>
+												<th> 76.7 </th>
+												<th> 69.6 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://github.com/NoviScl/BERT-RACE"> BERT_LARGE </a> </th>
+												<th> Jan 23, 2019 </th>
+												<th> River Valley High School, Singapore </th>
+												<th> 67.9 </th>
+												<th> 75.6 </th>
+												<th> 64.7 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1810.13441.pdf"> Reading Strategies Model </a> (ensemble) </th>
+												<th> Oct 31, 2018 </th>
+												<th> Tencent AI Lab & Cornell </th>
+												<th> 66.7 </th>
+												<th> 72.0 </th>
+												<th> 64.5 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://github.com/NoviScl/BERT-RACE"> BERT_BASE </a> </th>
+												<th> Jan 23, 2019 </th>
+												<th> River Valley High School, Singapore </th>
+												<th> 65.0 </th>
+												<th> 71.7 </th>
+												<th> 62.3 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1810.13441.pdf"> Reading Strategies Model </a> </th>
+												<th> Oct 31, 2018 </th>
+												<th> Tencent AI Lab & Cornell </th>
+												<th> 63.8 </th>
+												<th> 69.2 </th>
+												<th> 61.5 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf"> GPT </a> </th>
+												<th> Jun 11, 2018 </th>
+												<th> OpenAI </th>
+												<th> 59.0 </th>
+												<th> 62.9 </th>
+												<th> 57.4 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1811.08610.pdf"> Convolutional Spatial Attention </a> (ensemble) </th>
+												<th> Nov 21, 2018 </th>
+												<th> Joint Laboratory of HIT and iFLYTEK Research </th>
+												<th> 55.0 </th>
+												<th> 56.8 </th>
+												<th> 54.8 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1803.09074.pdf">BiAttention (MRU)</a> (ensemble) </th>
+												<th> Mar 24, 2018 </th>
+												<th> Nanyang Technological University & <br> Institute for Infocomm Research </th>
+												<th> 53.3 </th>
+												<th> 60.2 </th>
+												<th> 50.3 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1711.04964.pdf">Dynamic Fusion Networks</a>  (ensemble) </th>
+												<th> Nov 14, 2017 </th>
+												<th> MSR & CMU </th>
+												<th> 51.2 </th>
+												<th> 55.6 </th>
+												<th> 49.4 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1811.08610.pdf"> Convolutional Spatial Attention </a> </th>
+												<th> Nov 21, 2018 </th>
+												<th> Joint Laboratory of HIT and iFLYTEK Research </th>
+												<th> 50.9 </th>
+												<th> 52.2 </th>
+												<th> 50.3 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1803.09074.pdf">BiAttention (MRU) </a> </th>
+												<th> Mar 24, 2018 </th>
+												<th> Nanyang Technological University & <br> Institute for Infocomm Research </th>
+												<th> 50.4 </th>
+												<th> 57.7 </th>
+												<th> 47.4 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1806.04068.pdf">Hierarchical Co-Matching</a> </th>
+												<th> Jun 11, 2018 </th>
+												<th> Singapore Management University & <br> IBM Research </th>
+												<th> 50.4 </th>
+												<th> 55.8 </th>
+												<th> 48.2 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1711.04964.pdf">Dynamic Fusion Networks </a> </th>
+												<th> Nov 14, 2017 </th>
+												<th> MSR & CMU </th>
+												<th> 47.4 </th>
+												<th> 51.5 </th>
+												<th> 45.7 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1904.02651.pdf">GAR + ElimiNet </a>  (ensemble) </th>
+												<th> Jul 13, 2018 </th>
+												<th> IIT Madras </th>
+												<th> 47.2 </th>
+												<th> 47.4 </th>
+												<th> 47.4 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/16331/16177">Hierarchical Attention Flow</a> </th>
+												<th> Feb 02, 2018 </th>
+												<th>  Microsoft Research Asia & <br>  Harbin Institute of Technology</th>
+												<th> 46.0 </th>
+												<th> 45.0 </th>
+												<th> 46.4 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1904.02651.pdf">ElimiNet </a>  </th>
+												<th> Jul 13, 2018 </th>
+												<th> IIT Madras </th>
+												<th> 44.5 </th>
+												<th> 44.4 </th>
+												<th> 44.5 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Gated Attention Reader</a><sup>*</sup> </th>
+												<th> Apr 15, 2017 </th>
+												<th> CMU </th>
+												<th> 44.1 </th>
+												<th> 43.7 </th>
+												<th> 44.2 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Stanford Attentive Reader</a><sup>*</sup>  </th>
+												<th> Apr 15, 2017 </th>
+												<th> CMU </th>
+												<th> 43.3 </th>
+												<th> 44.2 </th>
+												<th> 43.0 </th>
+											  </tr>
+											  <tr>
+												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Sliding Window</a><sup>*</sup> </th>
+												<th> Apr 15, 2017 </th>
+												<th> CMU </th>
+												<th> 32.2 </th>
+												<th> 37.3 </th>
+												<th> 30.4 </th>
+											  </tr>
+											</tbody>
+										  </table>
 								</header>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a class="button primary">Learn More</a></li>
+										<li><a class="button">Learn More</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -142,14 +518,14 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h2>Aliquam sed mauris</h2>
+							<h2>Credits</h2>
 							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
 							<ul class="actions">
 								<li><a href="generic.html" class="button">Learn More</a></li>
 							</ul>
 						</section>
 						<section>
-							<h2>Etiam feugiat</h2>
+							<h2>Contact Us!</h2>
 							<dl class="alt">
 								<dt>Address</dt>
 								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>

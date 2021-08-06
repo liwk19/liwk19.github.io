@@ -20,9 +20,7 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>FewNLU</h1>
-						<p>A new NLP model<br />
-						built by <a href="https://twitter.com/ajlkn">@xxx</a>.</p>
+						<h1><strong>FewNLU: Few-Shot Learning for Natural Language Understanding</strong></h1>
 					</header>
 
 				<!-- Nav -->
@@ -30,7 +28,7 @@
 						<ul>
 							<li><a href="#intro" class="active">Introduction to FewNLU</a></li>
 							<li><a href="#first">Data Download</a></li>
-							<li><a href="#second">Package Download</a></li>
+							<li><a href="#second">Toolkit Installation & Usage</a></li>
 							<li><a href="#cta">Leaderboard</a></li>
 						</ul>
 					</nav>
@@ -45,16 +43,13 @@
 										<header class="major">
 											<h2>Introduction to FewNLU</h2>
 										</header>
-										<p>Recent empirical improvements due to transfer learning with language models have demonstrated that rich, 
-											unsupervised pre-training is an integral part of many language understanding systems. 
-											In particular, these results enable even low-resource tasks to benefit from very deep unidirectional ar- chitectures. 
-											Our major contribution is further gen- eralizing these findings to deep bidirectional ar- chitectures, 
-											allowing the same pre-trained model to successfully tackle a broad set of NLP tasks.</p>
-										<ul class="actions">
-											<li><a class="button">Learn More</a></li>
-										</ul>
+										<p>The Few-shot Learning for Natural Language Understanding (FewNLU) project is a collection of toolkits and resources for training, evaluating, and analyzing few-shot natural language understanding systems. FewNLU consists of:
+											<br/><br/>1. A systematic toolkit for few-shot natural language understanding. It integrates commonly-used NLU tasks, advanced few-shot learning methods, and supports an experimentally proven effective few-shot setting. 
+											<br/>2. A benchmark consisting of seven few-shot natural language understanding tasks built on existing FewGLUE datasets. Additional small-size development set is built for the purpose of hyper-parameter & model selection.
+											<br/>3. A public leaderboard for tracking performance on the FewNLU benchmark.
+											<br/><br/>Base on FewNLU, we have conducted systematic studies in terms of several fundamental problems in the field of few-shot natural language understanding, including few-shot setting and legal re-evaluation of existing methods, and have achieved the state-of-the-arts on the FewGLUE datasets. Please refer to our paper (<a href="https://github.com/zheng-yanan/FewNLU-prep">https://github.com/zheng-yanan/FewNLU-prep</a>) for more details. The ultimate goal of FewNLU is to drive the research in the development of effective and robust few-shot natural language understanding systems.
+										</p>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 								</div>
 							</section>
 
@@ -66,26 +61,23 @@
 								<ul class="features">
 									<li>
 										<span class="icon solid major style1 fa-code"></span>
-										<h3>Original Sources</h3>
-										<p>We use WordPiece embeddings (Wu et al., 2016) with a 30,000 token vocabulary. We denote split word pieces with ##.</p>
+										<h3>Recommended Few-shot Setting</h3>
+										<p>The benchmark dataset supports our recommended legal & effective few-shot learning by providing an additional small-size development set of 32 examples.</p>
 									</li>
 									<li>
 										<span class="icon major style3 fa-copy"></span>
-										<h3>How to use</h3>
-										<p>The first token of every sequence is al- ways the special classification embedding ([CLS]). 
-											The final hidden state (i.e., out- put of Transformer) corresponding to this to- ken is used as the aggregate sequence rep- resentation for classification tasks.</p>
+										<h3>Diverse & Complicated NLU Tasks</h3>
+										<p>The tasks are complicated sentence-pair or sentence-triple tasks that demand advanced understanding capabilities. Besides, the tasks are diverse, ranging from question answering, textual entailment, co-reference resolution, causal reasoning to word sense disambiguation.</p>
 									</li>
 									<li>
 										<span class="icon major style5 fa-gem"></span>
-										<h3>Data Augmentation</h3>
-										<p>Sentence pairs are packed together into a sin- gle sequence. We differentiate the sentences in two ways. 
-											First, we separate them with a special token ([SEP]). 
-											Second, we add a learned sentence A embedding to every token of the first sentence and a sentence B embed- ding to every token of the second sentence.</p>
+										<h3>Support Integrating Other Learning Paradigms</h3>
+										<p>The benchmark dataset also supports research that integrates other learning paradigms (such as semi-supervised learning) with few-shot learning by providing additional unlabeled datasets.</p>
 									</li>
 								</ul>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a class="button">Download Data</a></li>
+										<li><a href="https://cloud.tsinghua.edu.cn/f/6e9cd075d9024dc3b6db/?dl=1" class="button">Download Data</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -93,50 +85,36 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2>Package Download</h2>
-									<p>Quick facts about our model:</p>
+									<h2>Toolkit Installation & Usage</h2>
 								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Layers
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Attention Heads
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>4</strong> Pretraining Takss
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,09</strong> Hyperparameters
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,02400</strong> Parameters
-									</li>
-								</ul>
-								<h3>Why RACE is more challenging and interesting?</h3>
+								<h3>FewNLU provides systematic few-shot learning toolkits for natural language understanding tasks, which integrates commonly-used tasks and advanced few-shot learning methods. FewNLU supports:</h3>
 								<p class="content">
 									<ul>
-										<li> RACE is created by domain experts to test students' reading comprehension skills, consequently requiring non-trivial reasoning techniques </li>
-										<li> A significant gap between the state-of-the-art model's performance and the human performance </li>
-										<li> RACE has a wide variety of question types. Here are some samples: </li>
-									  <ul>
-										<li> What is the best title of the passage? (Summarization) </li>
-										<li> What was the author’s attitude towards the industry awards? (Inference) </li>
-										<li> Which of the following statements is WRONG according to the passage? (Deduction) </li>
-										<li> If the passage appeared in a newspaper, which section is the most suitable one? (Inference) </li>
-										<li> The first postage stamp was made _ . (Context matching) </li>
-									  </ul>
-										<li>  On a personal note: please think about college and high school entrance tests you or your children have experienced, e.g., SAT or college entrance exams (高考), which are purposely designed to differentiate smart and hard-working students from others. Questions in RACE were created to prepare Chinese students for the college entrance test and high school entrance tests :) </li>
+										<li>1. Reasonable and effective few-shot setting which uses a small-size dev set to perform model and hyper-param selection.</li>
+										<li>2. Different types of formalization for few-shot learning tasks, including standard sequence classification form, cloze form with hand-crafted prompts, and cloze form with continuous prompts.</li>
+										<li>3. Multiple advanced methods that could boost the performance of few-shot NLU tasks, e.g., PET, ADAPET, P-tuning, self-training, multi-task learning etc.</li>
+										<li>4. Easy-to-use interfaces that allow either directly accessing existing few-shot NLU tasks and methods, or quickly customizing new ones.<br/></li>
+										<p><br/></p>
+
+										<div class="box">
+											<h2 align="left"><strong>Installation</strong></h2>
+
+											<p align="left">Clone this repo</p>
+											<div class="box" align="left" style="background-color:#cfcfdf"><p align="left"><strong>git clone https://github.com/THUDM/FewNLU
+											<br/>cd FewNLU</strong></p>
+											</div>
+
+											<p align="left">To reproduce the exact results as is reported in our technical report paper (to be released soon), please install exact the same version of dependencies by running</p>
+											<div class="box" align="left" style="background-color:#cfcfdf"><p align="left"><strong>pip install -r requirements.txt</strong></p>
+											</div>
+										</div>
+
+										<p><br/>Please refer to the documents (<a href="https://github.com/zheng-yanan/FewNLU-prep/blob/main/README.md">https://github.com/zheng-yanan/FewNLU-prep/blob/main/README.md</a>) for detailed instructions of FewNLU usages.</p>
 									  </ul>
 									</p>
 								<footer class="major">
 									<ul class="actions special">
-										<li><a class="button">Download Package</a></li>
+										<li><a href="https://github.com/zheng-yanan/FewNLU-prep" class="button">Download Package</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -145,404 +123,91 @@
 							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Leaderboard</h2>
-									<p>Download the package, do experiments on your own device, and send us your results.<br />
-										Our email: xxxxxx<br/>
-										The email should contain these information: xxx, xxx, xxx</p>
+									<p>Report your results: If you have new results experimented with FewNLU, please send emails to <strong>zyanan93@gmail.com</strong> or <strong>zhouj18@mails.tsinghua.edu.cn</strong> attached with the link to your paper or reproducible source codes! Thank you!</p>
 										<table>
 											<tbody>
 											  <tr>
-												<th> <strong> Model </strong> </th>
-												<th> <strong> Report Time </strong> </th>
-												<th> <strong> Institute </strong> </th>
-												<th> <strong> RACE </strong> </th>
-												<th> <strong> RACE-M </strong> </th>
-												<th> <strong> RACE-H </strong> </th>
+												<th> <strong> Methods </strong> </th>
+												<th> <strong> Code/Paper </strong> </th>
+												<th> <strong> BoolQ </strong> </th>
+												<th> <strong> RTE </strong> </th>
+												<th> <strong> WiC </strong> </th>
+												<th> <strong> CB </strong> </th>
+												<th> <strong> MultiRC </strong> </th>
+												<th> <strong> WSC </strong> </th>
+												<th> <strong> COPA </strong> </th>
+												<th> <strong> Avg. </strong> </th>
 											  </tr>
 											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Human Ceiling Performance</a> </th>
-												<th> Apr 15, 2017 </th>
-												<th> CMU </th>
-												<th> <em>94.5</em>  </th>
-												<th> <em>95.4</em> </th>
-												<th> <em>94.2</em> </th>
+												<th> PET </th>
+												<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+												<th> 82.67 </th>
+												<th> 79.42 </th>
+												<th> 67.2 </th>
+												<th> 91.96/88.63 </th>
+												<th> 81.88/78.18/42.79 </th>
+												<th> 77.4 </th>
+												<th> 89 </th>
+												<th> 79.09 </th>
 											  </tr>
 											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Amazon Mechanical Turker</a> </th>
-												<th> Apr 15, 2017 </th>
-												<th> CMU </th>
-												<th> 73.3 </th>
-												<th> 85.1 </th>
-												<th> 69.4 </th>
+												<th> AdaPET </th>
+												<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+												<th> 81.28 </th>
+												<th> 82.58 </th>
+												<th> 66.5 </th>
+												<th> 89.73/86.63 </th>
+												<th> 81.87/77.88/43.05 </th>
+												<th> 81.01 </th>
+												<th> 88.75 </th>
+												<th> 79.41 </th>
 											  </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/2011.03292.pdf"> ALBERT-SingleChoice + transfer learning </a> (ensemble) </th>
-												<th> Nov 06, 2020 </th>
-												<th> Tencent Cloud Xiaowei & Tencent Cloud TI-ONE </th>
-												<th> <strong> 91.4 </strong> </th>
-												<th> <strong> 93.6 </strong> </th>
-												<th> <strong> 90.5 </strong> </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/1909.08053.pdf"> Megatron-BERT </a> (ensemble) </th>
-												<th> Mar 13, 2020 </th>
-												<th> NVIDIA Research </th>
-												<th> 90.9 </th>
-												<th> 93.1 </th>
-												<th> 90.0 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/2011.03292.pdf"> ALBERT-SingleChoice + transfer learning </a> </th>
-												<th> Nov 06, 2020 </th>
-												<th> Tencent Cloud Xiaowei & Tencent Cloud TI-ONE </th>
-												<th> 90.7 </th>
-												<th> 92.8 </th>
-												<th> 89.8 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/abs/2001.09415"> ALBERT + DUMA </a> (ensemble) </th>
-												<th> Mar 18, 2020 </th>
-												<th> SJTU & Huawei Noah’s Ark Lab </th>
-												<th> 89.8 </th>
-												<th> 92.6 </th>
-												<th> 88.7 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/1909.08053.pdf"> Megatron-BERT </a> </th>
-												<th> Mar 13, 2020 </th>
-												<th> NVIDIA Research </th>
-												<th> 89.5 </th>
-												<th> 91.8 </th>
-												<th> 88.6 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/abs/1909.11942"> ALBERT </a> (ensemble) </th>
-												<th> Sep 26, 2019 </th>
-												<th> Google Research & TTIC </th>
-												<th> 89.4 </th>
-												<th> 91.2 </th>
-												<th> 88.6 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/2005.00700.pdf"> UnifiedQA </a> </th>
-												<th> May 02, 2020 </th>
-												<th> AI2 & UW </th>
-												<th> 89.4  </th>
-												<th> - </th>
-												<th> - </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/abs/2001.09415"> ALBERT + DUMA </a> </th>
-												<th> Feb 08, 2020 </th>
-												<th> SJTU & Huawei Noah’s Ark Lab </th>
-												<th> 88.0 </th>
-												<th> 90.9 </th>
-												<th> 86.7 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/2005.00700.pdf"> T5</a><sup>*</sup> </th>
-												<th> May 02, 2020 </th>
-												<th> Google </th>
-												<th> 87.1  </th>
-												<th> - </th>
-												<th> - </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/abs/1909.11942"> ALBERT </a> </th>
-												<th> Sep 26, 2019 </th>
-												<th> Google Research & TTIC </th>
+											  <tr>
+												<th> P-Tuning </th>
+												<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+												<th> 82.25 </th>
+												<th> 82.22 </th>
+												<th> 66.22 </th>
+												<th> 91.96/89.07 </th>
+												<th> 82.02/77.56/44.18 </th>
+												<th> 83.17 </th>
 												<th> 86.5 </th>
-												<th> 89.0 </th>
-												<th> 85.5 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="http://arxiv.org/abs/1910.00458"> RoBERTa + MMM </a> </th>
-												<th> Oct 01, 2019 </th>
-												<th> MIT & Amazon Alexa AI </th>
-												<th> 85.0 </th>
-												<th> 89.1 </th>
-												<th>  83.3 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/abs/1908.11511"> DCMN+ </a> (ensemble) </th>
-												<th> Aug 30, 2019 </th>
-												<th> SJTU & CloudWalk </th>
-												<th> 84.1 </th>
-												<th> 88.5 </th>
-												<th> 82.3 </th>
-											   </tr>
-											   <tr>
-												<th> <a href="https://arxiv.org/abs/1907.11692"> RoBERTa </a> </th>
-												<th> Jul 26, 2019 </th>
-												<th> Facebook AI </th>
-												<th> 83.2 </th>
-												<th> 86.5 </th>
-												<th> 81.8 </th>
-											  </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/abs/1908.11511"> XLNet + DCMN+ </a> </th>
-												<th> Aug 30, 2019 </th>
-												<th> SJTU & CloudWalk </th>
-												<th> 82.8 </th>
-												<th> 86.5 </th>
-												<th> 81.3 </th>
-											   </tr>
-											   <tr>
-												 <th> <a href="https://arxiv.org/pdf/2010.10499.pdf"> BORT </a> </th>
-												<th> Oct 20, 2020 </th>
-												<th> Amazon Alexa </th>
-												<th> 82.2 </th>
-												<th> 85.9 </th>
-												<th> 80.7 </th>
-											   </tr>
-											   <tr>
-												<th> <a href="https://arxiv.org/abs/1906.08237"> XLNet </a> </th>
-												<th> Jun 19, 2019 </th>
-												<th> Google Brain & CMU </th>
-												<th> 81.75 </th>
-												<th> 85.45 </th>
-												<th> 80.21 </th>
-											  </tr>
-											   <tr>
-												<th> <a href="https://arxiv.org/abs/1908.11511"> BERT + DCMN+ </a> </th>
-												<th> Aug 30, 2019 </th>
-												<th> SJTU & CloudWalk </th>
-												<th> 75.8 </th>
-												<th> 79.3 </th>
-												<th> 74.4 </th>
-											  </tr>
-											   <tr>
-												<th> <a href="https://arxiv.org/abs/2003.04360"> GenNet </a> </th>
-												<th> Mar 03, 2020 </th>
-												<th> AIT, Pune </th>
-												<th> 75.4 </th>
-												<th> 77.3 </th>
-												<th> 79.6 </th>
+												<th> 79.83 </th>
 											  </tr>
 											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1901.09381.pdf"> Dual Co-Matching Network (DCMN) </a> (ensemble) </th>
-												<th> Mar 16, 2019 </th>
-												<th> SJTU & CloudWalk </th>
-												<th> 74.1 </th>
-												<th> 79.5 </th>
-												<th> 71.8 </th>
+												<th> iPET </th>
+												<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+												<th> 82.56 </th>
+												<th> 82.22 </th>
+												<th> 68.65 </th>
+												<th> 89.73/85.96 </th>
+												<th> 83.32/80.73/46.56 </th>
+												<th> 85.58 </th>
+												<th> 94.5 </th>
+												<th> 81.65 </th>
 											  </tr>
 											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1903.03033.pdf"> Option Comparison Network (OCN) </a> (ensemble) </th>
-												<th> Mar 07, 2019 </th>
-												<th> Pattern Recognition Center, WeChat AI, Tencent Inc </th>
-												<th> 73.5 </th>
-												<th> 78.4 </th>
-												<th> 71.5 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1901.09381.pdf"> Dual Co-Matching Network (DCMN) </a> </th>
-												<th> Mar 16, 2019 </th>
-												<th> SJTU & CloudWalk </th>
-												<th> 72.3 </th>
-												<th> 77.6 </th>
-												<th> 70.1 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1902.00993.pdf"> BERT_LARGE </a> </th>
-												<th> Feb 03, 2019 </th>
-												<th> Tencent AI Lab </th>
-												<th> 72.0 </th>
-												<th> 76.6 </th>
-												<th> 70.1 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1903.03033.pdf"> Option Comparison Network (OCN) </a> </th>
-												<th> Mar 07, 2019 </th>
-												<th> Pattern Recognition Center, WeChat AI, Tencent Inc </th>
-												<th> 71.7 </th>
-												<th> 76.7 </th>
-												<th> 69.6 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://github.com/NoviScl/BERT-RACE"> BERT_LARGE </a> </th>
-												<th> Jan 23, 2019 </th>
-												<th> River Valley High School, Singapore </th>
-												<th> 67.9 </th>
-												<th> 75.6 </th>
-												<th> 64.7 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1810.13441.pdf"> Reading Strategies Model </a> (ensemble) </th>
-												<th> Oct 31, 2018 </th>
-												<th> Tencent AI Lab & Cornell </th>
-												<th> 66.7 </th>
-												<th> 72.0 </th>
-												<th> 64.5 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://github.com/NoviScl/BERT-RACE"> BERT_BASE </a> </th>
-												<th> Jan 23, 2019 </th>
-												<th> River Valley High School, Singapore </th>
-												<th> 65.0 </th>
-												<th> 71.7 </th>
-												<th> 62.3 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1810.13441.pdf"> Reading Strategies Model </a> </th>
-												<th> Oct 31, 2018 </th>
-												<th> Tencent AI Lab & Cornell </th>
-												<th> 63.8 </th>
-												<th> 69.2 </th>
-												<th> 61.5 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf"> GPT </a> </th>
-												<th> Jun 11, 2018 </th>
-												<th> OpenAI </th>
-												<th> 59.0 </th>
-												<th> 62.9 </th>
-												<th> 57.4 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1811.08610.pdf"> Convolutional Spatial Attention </a> (ensemble) </th>
-												<th> Nov 21, 2018 </th>
-												<th> Joint Laboratory of HIT and iFLYTEK Research </th>
-												<th> 55.0 </th>
-												<th> 56.8 </th>
-												<th> 54.8 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1803.09074.pdf">BiAttention (MRU)</a> (ensemble) </th>
-												<th> Mar 24, 2018 </th>
-												<th> Nanyang Technological University & <br> Institute for Infocomm Research </th>
-												<th> 53.3 </th>
-												<th> 60.2 </th>
-												<th> 50.3 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1711.04964.pdf">Dynamic Fusion Networks</a>  (ensemble) </th>
-												<th> Nov 14, 2017 </th>
-												<th> MSR & CMU </th>
-												<th> 51.2 </th>
-												<th> 55.6 </th>
-												<th> 49.4 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1811.08610.pdf"> Convolutional Spatial Attention </a> </th>
-												<th> Nov 21, 2018 </th>
-												<th> Joint Laboratory of HIT and iFLYTEK Research </th>
-												<th> 50.9 </th>
-												<th> 52.2 </th>
-												<th> 50.3 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1803.09074.pdf">BiAttention (MRU) </a> </th>
-												<th> Mar 24, 2018 </th>
-												<th> Nanyang Technological University & <br> Institute for Infocomm Research </th>
-												<th> 50.4 </th>
-												<th> 57.7 </th>
-												<th> 47.4 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1806.04068.pdf">Hierarchical Co-Matching</a> </th>
-												<th> Jun 11, 2018 </th>
-												<th> Singapore Management University & <br> IBM Research </th>
-												<th> 50.4 </th>
-												<th> 55.8 </th>
-												<th> 48.2 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1711.04964.pdf">Dynamic Fusion Networks </a> </th>
-												<th> Nov 14, 2017 </th>
-												<th> MSR & CMU </th>
-												<th> 47.4 </th>
-												<th> 51.5 </th>
-												<th> 45.7 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1904.02651.pdf">GAR + ElimiNet </a>  (ensemble) </th>
-												<th> Jul 13, 2018 </th>
-												<th> IIT Madras </th>
-												<th> 47.2 </th>
-												<th> 47.4 </th>
-												<th> 47.4 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/16331/16177">Hierarchical Attention Flow</a> </th>
-												<th> Feb 02, 2018 </th>
-												<th>  Microsoft Research Asia & <br>  Harbin Institute of Technology</th>
-												<th> 46.0 </th>
-												<th> 45.0 </th>
-												<th> 46.4 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1904.02651.pdf">ElimiNet </a>  </th>
-												<th> Jul 13, 2018 </th>
-												<th> IIT Madras </th>
-												<th> 44.5 </th>
-												<th> 44.4 </th>
-												<th> 44.5 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Gated Attention Reader</a><sup>*</sup> </th>
-												<th> Apr 15, 2017 </th>
-												<th> CMU </th>
-												<th> 44.1 </th>
-												<th> 43.7 </th>
-												<th> 44.2 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Stanford Attentive Reader</a><sup>*</sup>  </th>
-												<th> Apr 15, 2017 </th>
-												<th> CMU </th>
-												<th> 43.3 </th>
-												<th> 44.2 </th>
-												<th> 43.0 </th>
-											  </tr>
-											  <tr>
-												<th> <a href="https://arxiv.org/pdf/1704.04683.pdf">Sliding Window</a><sup>*</sup> </th>
-												<th> Apr 15, 2017 </th>
-												<th> CMU </th>
-												<th> 32.2 </th>
-												<th> 37.3 </th>
-												<th> 30.4 </th>
+												<th> noisy </th>
+												<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+												<th> 82.26 </th>
+												<th> 83.39 </th>
+												<th> 65.75 </th>
+												<th> 90.63/88.55 </th>
+												<th> 82.52/79.55/44.75 </th>
+												<th> 77.16 </th>
+												<th> 92.25 </th>
+												<th> 79.91 </th>
 											  </tr>
 											</tbody>
 										  </table>
 								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a class="button primary">Learn More</a></li>
-										<li><a class="button">Learn More</a></li>
-									</ul>
-								</footer>
 							</section>
 
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
-							<h2>Credits</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a class="button">See More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Contact Us!</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>

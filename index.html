@@ -87,17 +87,15 @@
 								<header class="major">
 									<h2>Toolkit Installation & Usage</h2>
 								</header>
-								<h3 align="left">FewNLU provides systematic few-shot learning toolkits for natural language understanding tasks, which integrates commonly-used tasks and advanced few-shot learning methods. FewNLU supports:</h3>
-								<p class="content" align="left">
-									<ul>
-										<li align="left">1. Reasonable and effective few-shot setting which uses a small-size dev set to perform model and hyper-param selection.</li>
-										<li align="left">2. Different types of formalization for few-shot learning tasks, including standard sequence classification form, cloze form with hand-crafted prompts, and cloze form with continuous prompts.</li>
-										<li align="left">3. Multiple advanced methods that could boost the performance of few-shot NLU tasks, e.g., PET, ADAPET, P-tuning, self-training, multi-task learning etc.</li>
-										<li align="left">4. Easy-to-use interfaces that allow either directly accessing existing few-shot NLU tasks and methods, or quickly customizing new ones.<br/></li>
+								<p align="left">
+									FewNLU provides systematic few-shot learning toolkits for natural language understanding tasks, which integrates commonly-used tasks and advanced few-shot learning methods. FewNLU supports:
+									<br/><br/>1. Reasonable and effective few-shot setting which uses a small-size dev set to perform model and hyper-param selection.
+									<br/>2. Different types of formalization for few-shot learning tasks, including standard sequence classification form, cloze form with hand-crafted prompts, and cloze form with continuous prompts.</li>
+									<br/>3. Multiple advanced methods that could boost the performance of few-shot NLU tasks, e.g., PET, ADAPET, P-tuning, self-training, multi-task learning etc.
+									<br/>4. Easy-to-use interfaces that allow either directly accessing existing few-shot NLU tasks and methods, or quickly customizing new ones.
 
-										<p align="left"><br/>Please refer to the documents (<a href="https://github.com/zheng-yanan/FewNLU-prep/blob/main/README.md">https://github.com/zheng-yanan/FewNLU-prep/blob/main/README.md</a>) for detailed instructions of FewNLU usages.</p>
-									  </ul>
-									</p>
+									<br/><br/>Please refer to the documents (<a href="https://github.com/zheng-yanan/FewNLU-prep/blob/main/README.md">https://github.com/zheng-yanan/FewNLU-prep/blob/main/README.md</a>) for detailed instructions of FewNLU usages.</p>
+								</p>
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="https://github.com/zheng-yanan/FewNLU-prep" class="button">Download Package</a></li>
@@ -107,88 +105,86 @@
 
 						<!-- Get Started -->
 							<section id="cta" class="main special">
-								<div class="content">
-									<header class="major">
-										<h2>Leaderboard</h2>
-										<p align="left">Report your results: If you have new results experimented with FewNLU, please send emails to <strong>zyanan93@gmail.com</strong> or <strong>zhouj18@mails.tsinghua.edu.cn</strong> attached with the link to your paper or reproducible source codes! Thank you!</p>
-											<table>
-												<tbody>
-												<tr>
-													<th> <strong> Methods </strong> </th>
-													<th> <strong> Code/Paper </strong> </th>
-													<th> <strong> BoolQ </strong> </th>
-													<th> <strong> RTE </strong> </th>
-													<th> <strong> WiC </strong> </th>
-													<th> <strong> CB </strong> </th>
-													<th> <strong> MultiRC </strong> </th>
-													<th> <strong> WSC </strong> </th>
-													<th> <strong> COPA </strong> </th>
-													<th> <strong> Avg. </strong> </th>
-												</tr>
-												<tr>
-													<th> PET </th>
-													<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
-													<th> 82.67 </th>
-													<th> 79.42 </th>
-													<th> 67.2 </th>
-													<th> 91.96/88.63 </th>
-													<th> 81.88/78.18/42.79 </th>
-													<th> 77.4 </th>
-													<th> 89 </th>
-													<th> 79.09 </th>
-												</tr>
-												<tr>
-													<th> AdaPET </th>
-													<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
-													<th> 81.28 </th>
-													<th> 82.58 </th>
-													<th> 66.5 </th>
-													<th> 89.73/86.63 </th>
-													<th> 81.87/77.88/43.05 </th>
-													<th> 81.01 </th>
-													<th> 88.75 </th>
-													<th> 79.41 </th>
-												</tr>
-												<tr>
-													<th> P-Tuning </th>
-													<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
-													<th> 82.25 </th>
-													<th> 82.22 </th>
-													<th> 66.22 </th>
-													<th> 91.96/89.07 </th>
-													<th> 82.02/77.56/44.18 </th>
-													<th> 83.17 </th>
-													<th> 86.5 </th>
-													<th> 79.83 </th>
-												</tr>
-												<tr>
-													<th> iPET </th>
-													<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
-													<th> 82.56 </th>
-													<th> 82.22 </th>
-													<th> 68.65 </th>
-													<th> 89.73/85.96 </th>
-													<th> 83.32/80.73/46.56 </th>
-													<th> 85.58 </th>
-													<th> 94.5 </th>
-													<th> 81.65 </th>
-												</tr>
-												<tr>
-													<th> noisy </th>
-													<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
-													<th> 82.26 </th>
-													<th> 83.39 </th>
-													<th> 65.75 </th>
-													<th> 90.63/88.55 </th>
-													<th> 82.52/79.55/44.75 </th>
-													<th> 77.16 </th>
-													<th> 92.25 </th>
-													<th> 79.91 </th>
-												</tr>
-												</tbody>
-											</table>
-									</header>
-								</div>
+								<header class="major">
+									<h2>Leaderboard</h2>
+								</header>
+								<p align="left">Report your results: If you have new results experimented with FewNLU, please send emails to <strong>zyanan93@gmail.com</strong> or <strong>zhouj18@mails.tsinghua.edu.cn</strong> attached with the link to your paper or reproducible source codes! Thank you!</p>
+									<table>
+										<tbody>
+										<tr>
+											<th> <strong> Methods </strong> </th>
+											<th> <strong> Code/Paper </strong> </th>
+											<th> <strong> BoolQ </strong> </th>
+											<th> <strong> RTE </strong> </th>
+											<th> <strong> WiC </strong> </th>
+											<th> <strong> CB </strong> </th>
+											<th> <strong> MultiRC </strong> </th>
+											<th> <strong> WSC </strong> </th>
+											<th> <strong> COPA </strong> </th>
+											<th> <strong> Avg. </strong> </th>
+										</tr>
+										<tr>
+											<th> PET </th>
+											<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+											<th> 82.67 </th>
+											<th> 79.42 </th>
+											<th> 67.2 </th>
+											<th> 91.96/88.63 </th>
+											<th> 81.88/78.18/42.79 </th>
+											<th> 77.4 </th>
+											<th> 89 </th>
+											<th> 79.09 </th>
+										</tr>
+										<tr>
+											<th> AdaPET </th>
+											<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+											<th> 81.28 </th>
+											<th> 82.58 </th>
+											<th> 66.5 </th>
+											<th> 89.73/86.63 </th>
+											<th> 81.87/77.88/43.05 </th>
+											<th> 81.01 </th>
+											<th> 88.75 </th>
+											<th> 79.41 </th>
+										</tr>
+										<tr>
+											<th> P-Tuning </th>
+											<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+											<th> 82.25 </th>
+											<th> 82.22 </th>
+											<th> 66.22 </th>
+											<th> 91.96/89.07 </th>
+											<th> 82.02/77.56/44.18 </th>
+											<th> 83.17 </th>
+											<th> 86.5 </th>
+											<th> 79.83 </th>
+										</tr>
+										<tr>
+											<th> iPET </th>
+											<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+											<th> 82.56 </th>
+											<th> 82.22 </th>
+											<th> 68.65 </th>
+											<th> 89.73/85.96 </th>
+											<th> 83.32/80.73/46.56 </th>
+											<th> 85.58 </th>
+											<th> 94.5 </th>
+											<th> 81.65 </th>
+										</tr>
+										<tr>
+											<th> noisy </th>
+											<th> <a href="https://github.com/zheng-yanan/FewNLU-prep">(url)</a> </th>
+											<th> 82.26 </th>
+											<th> 83.39 </th>
+											<th> 65.75 </th>
+											<th> 90.63/88.55 </th>
+											<th> 82.52/79.55/44.75 </th>
+											<th> 77.16 </th>
+											<th> 92.25 </th>
+											<th> 79.91 </th>
+										</tr>
+										</tbody>
+									</table>
 							</section>
 
 					</div>
